@@ -41,7 +41,7 @@ RULES = [
     (r"seven", r"s7n"),
     (r"eight", r"e8t"),
     (r"nine", r"n9e"),
-]
+] # not my idea
 
 @measure_time
 def solve2(data):
