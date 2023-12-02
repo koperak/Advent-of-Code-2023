@@ -26,4 +26,4 @@ def test_solve1(parsed_data):
 # PART 2
 def test_solve2(parsed_data):
     solution = solve2(parsed_data)
-    # asserts go here
+    assert solution == 2286

@@ -53,7 +53,15 @@ def solve1(data):
 # PART 2
 @measure_time
 def solve2(data):
-    pass
+    from math import prod
+    game_sum = 0
+    for game, game_sets in data.items():
+        game_set_valid = {"red": [], "green": [], "blue": []}
+        for game_set in game_sets:
+            for bag_color, bag_qty in game_set.items():
+                game_set_valid[bag_color].append(bag_qty)
+        game_sum += prod([max(x) for x in game_set_valid.values()])
+    return game_sum
 
 
 if __name__ == "__main__":
