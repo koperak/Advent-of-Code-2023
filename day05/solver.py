@@ -51,7 +51,7 @@ def solve1(data):
     result = []
     for i in data[0][1]:
         result.append(solver(i, data))
-    return min(result)
+q    return min(result)
 
 
 # PART 2
