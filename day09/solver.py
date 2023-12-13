@@ -51,7 +51,7 @@ def solve2(data):
 
     for data_line in data:
         extrapolated_values_list = [data_line[0]] + [_[0] for _ in calculate_difference(data_line)]
-        difference = difference + reduce(lambda x, y: x - y, extrapolated_values_list[:-1:])
+        difference = difference + reduce(lambda x, y: y - x, reversed(extrapolated_values_list[:-1:]))
 
     return difference
 
